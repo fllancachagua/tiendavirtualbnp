@@ -1,0 +1,130 @@
+<div class="container estilo_pagina_principal">
+  <div class="row">
+      <div class="col-sm-4"> 
+          <img [src]="book.foto" class="img-responsive"> 
+      </div>
+      <div class="col-sm-8">
+        <div class="row">
+          <div class="col-sm-12">                  
+              <ul class="list-group">
+                  <li class="list-group-item">
+                      <label><span class="estilo_titulos">{{book.titulo}}</span></label>
+                      <p class="text-left estilo_contenidos espaciado_minimo">Autor: <span class="estilo_cabecera">{{book.autor}}</span></p><br>
+                      <p class="text-left estilo_contenidos espaciado_minimo">Publicado en: <span class="estilo_cabecera">{{book.fechaPublicacion}}</span></p><br>
+                      <p class="text-left estilo_contenidos espaciado_minimo" >Materia: <span class="estilo_cabecera" *ngFor="let materia of book.materia; index as i; count as c">{{materia.nombre}} {{i==(c-1)?"":"/"}} </span></p><br>
+                      <span [ngClass]="getColorDisponibilidad(book.disponibilidad)">{{book.disponibilidad}}</span><br><br>
+                      <div class="row estilo_sin_padding" *ngFor="let precio of book.precios">
+                          <div class="col-sm-12">
+                            <div class="row " >
+                                <div class="col-sm-4">
+                                    <p class="text-left "><span class="estilo_cabecera">{{precio.presentacion}} </span><br><span class="estilo_moneda">S/. </span><span class="estilo_precio">{{precio.precioSoles}}</span></p>
+                                    <!-- <p class="text-left  espaciado_minimo"><span class="estilo_moneda">US$ </span> <span class="estilo_precio">{{precio.precioDolares}}</span></p> <br> -->
+                                </div>
+                                <div class="col-sm-8 ">
+                                    <button type="button" (click)="agregarItemACarrito(book.id, book.titulo, book.autor,precio.presentacion,precio.precioSoles, book.foto )" class="btn btn-primary btn-block active "><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Agregar al carrito</button>
+                                </div>
+                                <!--<div class="col-sm-4">
+                                    <button type="button" class="btn btn-primary btn-block active">Comprar ahora</button>
+                                </div>-->
+                            </div>
+                            <div class="row " >
+                                <div class="col-sm-12 ">
+                                    <hr>
+                                </div>
+                            </div>
+                          </div>
+                      </div>
+                    </li>
+                  <li class="list-group-item">
+                      <div class="row">
+                          <div class="col-sm-12 text-center">
+                              <label><span class="estilo_titulos">información adicional</span></label>
+                          </div>
+                      </div>                    
+                      <div class="row atributo_alineado_izquierda" >
+                          <div class="col-md-12" >
+                              <div class="row text-left">
+                                  <div class="col-md-6" >                        
+                                      <p  class="estilo_contenidos">isbn&nbsp;:&nbsp; {{book.isbn}}</p>
+                                  </div>
+                                  <div class="col-md-6" >                        
+                                      <p  class="estilo_contenidos">páginas&nbsp;:&nbsp;{{book.paginas}} </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>  
+                      <div class="row atributo_alineado_izquierda">
+                          <div class="col-md-12">
+                              <div class="row text-left">
+                                  <div class="col-md-6" >                        
+                                      <p  class="estilo_contenidos">ancho&nbsp;:&nbsp; {{book.ancho}}</p>
+                                  </div>
+                                  <div class="col-md-6" >                        
+                                      <p  class="estilo_contenidos">altura&nbsp;:&nbsp;{{book.altura}} </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div> 
+                      <div class="row atributo_alineado_izquierda">
+                          <div class="col-md-12">
+                              <div class="row text-left">
+                                  <div class="col-md-6" >                        
+                                      <p  class="estilo_contenidos">peso&nbsp;:&nbsp; {{book.peso}}</p>
+                                  </div>
+                                  <div class="col-md-6" >                        
+                                      <p  class="estilo_contenidos">formato&nbsp;:&nbsp;{{book.formato}} </p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>                                                                   
+                  </li>                   
+                  <li class="list-group-item">
+                      <div class="row">
+                          <div class="col-sm-12 text-center">
+                              <label><span class="estilo_titulos">reseña</span></label>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-sm-12">
+                              <p  class="estilo_contenidos">{{book.resenia}}</p>
+                          </div>
+                      </div>                      
+                  </li>  
+                  <li class="list-group-item">
+                      <div class="row">
+                          <div class="col-sm-12 text-center">
+                              <label><span class="estilo_titulos">acerca del autor</span></label>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-sm-12">
+                              <p class="estilo_contenidos">{{book.acercaAutor}}</p>
+                          </div>
+                      </div>                      
+                  </li>  
+                   <li class="list-group-item">
+                      <div class="row">
+                          <div class="col-sm-12 text-center">
+                              <label><span class="estilo_titulos">índice</span></label>
+                          </div>
+                      </div>
+                      <div class="row"  >
+                          <div class="col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <tr *ngFor="let indice of book.indice">
+                                        <td><p class="estilo_contenidos">{{indice.numero}}</p></td>
+                                        <td><p class="estilo_contenidos">{{indice.descripcion}}</p></td>
+                                    </tr>
+                              </table>
+                          </div>
+                        </div>
+                    
+                      </div>                      
+                  </li>                         
+              </ul>
+            </div>  
+          </div>
+      </div>
+  </div>    
+</div>

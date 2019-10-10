@@ -1,24 +1,7 @@
-.estilo_contenidos{
-   font-family: monospace; font-size: 15px;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.estilo_letra_cursiva{
-   font-style: italic
-}
-
 .estilo_titulo{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
  }
-
- .contenido_justificado{
-    text-align: justify
- }
  
- .estilo_titulos{
-    font-family: monospace;
-    font-size: 24px;
-} 
  .estilo_autor{
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
      font-size: 10px;

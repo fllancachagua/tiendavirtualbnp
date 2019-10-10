@@ -1,0 +1,25 @@
+<div class="container estilo_pagina_principal">
+  <div class="row" *ngFor="let book of books">
+      <hr>
+      <div class="col-sm-2 text-center" >
+          <a href="#home" (click)="showBook(book.id)">
+          <img [src]="book.foto" class="img-responsive estilo_imagen_principal"> 
+          </a>
+      </div>
+      <div class="col-sm-10" >
+              <a [routerLink]="['/publicacion/',book.id]" > <p class="text-left estilo_titulo espaciado_minimo">{{book.titulo}}</p></a><br>
+              <p class="text-left estilo_autor espaciado_minimo">{{book.autor}}  |  Publicado en {{book.fechaPublicacion}}</p><br>
+              <span [ngClass]="getColorDisponibilidad(book.disponibilidad)">{{book.disponibilidad}}</span><br><br>
+              <div class="container estilo_sin_padding" *ngFor="let precio of book.precios">
+                  <div class="row" >
+                      <div class="col-sm-2">
+                          <p class="text-left estilo_presentacion espaciado_minimo">{{precio.presentacion}} </p><br>
+                          <p class="text-left  espaciado_minimo"><span class="estilo_moneda">S/. </span> <span class="estilo_precio">{{precio.precioSoles}}</span></p> <br>
+                          <!-- <p class="text-left  espaciado_minimo"><span class="estilo_moneda">US$ </span> <span class="estilo_precio">{{precio.precioDolares}}</span></p> <br> -->
+                          <hr>
+                      </div>
+                  </div>
+              </div>
+      </div>
+  </div>    
+</div>
