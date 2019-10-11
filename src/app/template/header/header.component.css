@@ -6,7 +6,7 @@
     font-size: 11px !important;
     letter-spacing: 3px;
    /* opacity: 0.8;*/
-    padding: 10px 0 30px 80px; /*top right bottom left*/
+   /* padding: 10px 0 30px 80px;*/ /*top right bottom left*/
   }
   
   /* Add a gray color to all navbar links */
@@ -49,7 +49,7 @@
     background-color:  rgb(138, 182, 238) !important;
   } 
 
-  #ex3 .fa-stack[data-count]:after{
+  #opcion_carrito .fa-stack[data-count]:after{
     position:absolute;
     right:0%;
     top:1%;
@@ -59,8 +59,12 @@
     border-radius:50%;
     line-height:.8em;
     color: white;
-    background:rgba(82, 224, 146, 0.85);
+    background:coral;
     text-align:center;
     min-width: 1em;
     font-weight:bold;
+  }
+
+  .margen_top_icono_carrito{
+    margin-top: -16px;
   }

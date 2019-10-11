@@ -21,5 +21,9 @@ export class ItemAgregadoComponent implements OnInit {
 
    irAInicio(){
     this.publicacionService.irAInicio();
-   }   
+   }  
+   
+   irACarrito(){
+     this.carritoService.irACarrito();
+   }
 }

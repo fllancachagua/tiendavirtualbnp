@@ -7,8 +7,9 @@ export class BookAdded {
     public cantidad: number;
     public subTotal: number;
     public foto: string;
+    public codigoMoneda: string;
 
-    constructor(id:string,titulo:string,autor: string,presentacion: string,precioUnitario: number,cantidad: number,subTotal: number, foto: string){
+    constructor(id:string,titulo:string,autor: string,presentacion: string,precioUnitario: number,cantidad: number,subTotal: number, codigoMoneda: string,foto: string){
         this.id     = id;
         this.titulo = titulo;
         this.autor  = autor;
@@ -17,5 +18,6 @@ export class BookAdded {
         this.cantidad   = cantidad;
         this.subTotal   = subTotal;
         this.foto       = foto;
+        this.codigoMoneda = codigoMoneda;
     }
 }

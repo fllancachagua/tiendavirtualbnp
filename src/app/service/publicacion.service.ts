@@ -20,6 +20,7 @@ export class PublicacionService {
    irAInicio(){
      this.router.navigate(['']);
    }
+   
    obtenerPublicacion(id:string){
      //temporal
       return this.buscarPublicaciones().filter(x=>x.id == id)[0];

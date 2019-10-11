@@ -2,12 +2,8 @@ footer {
     background-color: #0E3970;
     padding: 32px;
     font-size: 11px !important;
-    letter-spacing: 3px;  
-    
-    
-    /* bottom: 0;
-    width: 100%;
-    position: absolute; */
+    letter-spacing: 3px;    
+    border: 0;
   }
   
   footer a {
@@ -18,4 +14,3 @@ footer {
     color: #777;
     text-decoration: none;
   }
-

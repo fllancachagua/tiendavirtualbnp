@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/model/book';
 import { Router } from '@angular/router';
 import { PublicacionService } from 'src/app/service/publicacion.service';
-import { BookPrices } from 'src/app/model/book-prices';
-import { Indice } from 'src/app/model/indice';
+
 
 @Component({
   selector: 'app-listado',

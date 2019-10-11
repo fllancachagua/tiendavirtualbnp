@@ -1,0 +1,51 @@
+<div class="container estilo_pagina_principal">
+    <div class="row ">
+      <div class="col-sm-12 margin_bottom_menos_25">
+          <label ><span class="p1 fa-stack fa-3x has-badge margen_top_icono_carrito" ><i class="p3 fa fa-shopping-cart fa-stack-1x" ></i></span> <span class="estilo_contenidos">tu carrito </span></label>
+      </div>
+    </div>
+    <div class="row" *ngFor="let book of carrito.books">
+        <hr class="margin_top_cero">
+        <div class="col-sm-1 text-center" >
+            <img [src]="book.foto" class="img-responsive estilo_imagen_principal"> 
+        </div>
+        <div class="col-sm-7" >
+            <div class="row">
+                <div class="col-sm-12" >
+                    <p  class="estilo_contenidos">{{book.titulo}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12" >
+                   <label> <span class="estilo_autor">Presentación: </span><span  class="estilo_presentacion">{{book.presentacion}}</span></label>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-1" >
+          <p  class="estilo_contenidos">{{book.cantidad}}</p>
+        </div>
+        <div class="col-sm-1" >
+          <p  class="estilo_contenidos">{{book.codigoMoneda}} {{book.precioUnitario}}</p>
+        </div>
+        <div class="col-sm-1" >
+            <p  class="estilo_contenidos">{{book.codigoMoneda}} {{book.subTotal}}</p>
+        </div>
+        <div class="col-sm-1" >
+            <i class="fa fa-trash fa-2x" aria-hidden="true"></i>
+        </div>
+    </div>    
+    <hr class="margin_top_cero">
+    <div class="row">
+        <div class="col-sm-12 text-right">
+            <label >sub total: <span class="estilo_contenidos">{{carrito.codigoMoneda}} {{carrito.subTotalProducto}} </span></label>
+        </div>
+    </div>     
+    <div class="row">
+      <div class="col-sm-offset-9">
+          <button type="button" (click)="irA" class="btn btn-primary btn-block active ">realizar pedido</button>
+      </div>    
+    </div>     
+    <div class="row">
+        <div class="col-sm-12"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+      </div>    
+  </div>

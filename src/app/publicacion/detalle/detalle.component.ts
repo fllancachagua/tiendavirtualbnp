@@ -21,8 +21,8 @@ export class DetalleComponent implements OnInit {
     this.book = this.publicacionService.obtenerPublicacion(this.idBook);
   }
 
-  agregarItemACarrito(id:string,titulo:string, autor:string,presentacion:string,precioSoles:string, foto:string){
-    this.carritoService.agregarItemASesionCarritoCompras(new BookAdded(id,titulo,autor,presentacion,+precioSoles,1,+precioSoles,foto));
+  agregarItemACarrito(id:string,titulo:string, autor:string,presentacion:string,precioSoles:string, codigoMoneda:string, foto:string){
+    this.carritoService.agregarItemASesionCarritoCompras(new BookAdded(id,titulo,autor,presentacion,+precioSoles,1,+precioSoles,codigoMoneda, foto));
     this.router.navigate(['/itemAgregado',id]);
   }
 

@@ -1,0 +1,48 @@
+<form class="form-horizontal" [formGroup]="formValidarUsuario" >
+<div class="container estilo_pagina_principal">
+    <div class="row " >
+      <div class="col-sm-5 ">
+          <div class="row ">
+              <div class="col-sm-12">
+                  <label class="margin_bottom_menos_20"><span class="p1 fa-stack fa-3x" ><i class="p3 fa fa-user fa-stack-1x" ></i></span> <span class="estilo_contenidos">tengo&nbsp;una&nbsp;cuenta</span></label>
+                  <hr class="margin_top_cero">
+              </div>
+          </div>
+          <div class="row ">
+              <div class="col-sm-6">
+                  <button type="button" class="btn btn-primary btn-block active">inicia sesión</button>
+              </div>
+              <div class="col-sm-6">
+                  <button type="button" class="btn btn-default btn-block">crea una cuenta</button>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-1">&nbsp;</div>
+      <div class="col-sm-6">
+          <div class="row ">
+              <div class="col-sm-12">
+                <label class="margin_bottom_menos_20" ><span class="p1 fa-stack fa-3x" ><i class="p3 fa fa-user-secret fa-stack-1x" ></i></span> <span class="estilo_contenidos">invitado</span></label>
+                <hr class="margin_top_cero">
+              </div>
+            </div>
+          <div class="row ">
+              <div class="col-sm-6">
+                  <input type="text"  class="form-control" [ngClass]="displayFieldCss('correo')" formControlName="correo"  placeholder="Correo electrónico" required> 
+                  <div class="invalid-feedback">
+                      Debe ingresar su correo electrónico.
+                  </div>  
+              </div>
+              <div class="col-sm-6">
+                  <button type="button" (click)="continuarComoInvitado()" class="btn btn-default btn-block active">continuar como invitado</button>
+              </div>
+          </div>
+        </div>      
+    </div>
+    <div class="row">
+      <div class="col-sm-12"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+    </div>
+  </div>
+  </form>
+
+    
+    
