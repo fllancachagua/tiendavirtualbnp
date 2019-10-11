@@ -1,70 +1,70 @@
 /* Add a dark background color with a little bit see-through */
 .navbar {
-    margin-bottom: 0;
-    background-color: #0E3970;
-    border: 0;
-    font-size: 11px !important;
-    letter-spacing: 3px;
-   /* opacity: 0.8;*/
-   /* padding: 10px 0 30px 80px;*/ /*top right bottom left*/
-  }
-  
-  /* Add a gray color to all navbar links */
-  .navbar li a, .navbar .navbar-brand {
-    /*color: #d5d5d5 !important;*/
-    color: #f5f5f5;
-    font-size: 11px !important;
-    letter-spacing: 4px;        
-  }
-  
-  /* On hover, the links will turn white */
-  /* .navbar-nav li a:hover {
-    color: #fff !important;
-  }
-   */
-  /* The active link */
-  .navbar-nav li.active a {
-     color: #fff !important; 
-     background-color:#c4c437 !important; 
-  }
-  
-  /* Remove border color from the collapsible button */
-  .navbar-default .navbar-toggle {
-    border-color: transparent;
-  }
-  
-  /* Dropdown */
-  .open .dropdown-toggle {
-    color: #fff ;
-    background-color: rgb(87, 135, 199) !important;
-  }
-  
-  /* Dropdown links */
-  .dropdown-menu li a {
-    color: #000 !important;
-  }
-  
-  /* On hover, the dropdown links will turn red*/
-  .dropdown-menu li a:hover {
-    background-color:  rgb(138, 182, 238) !important;
-  } 
+  margin-bottom: 0;
+  background-color: #0E3970;
+  border: 0;
+  font-size: 11px !important;
+  letter-spacing: 1px;
+ /* opacity: 0.8;*/
+ /* padding: 10px 0 30px 80px;*/ /*top right bottom left*/
+}
 
-  #opcion_carrito .fa-stack[data-count]:after{
-    position:absolute;
-    right:0%;
-    top:1%;
-    content: attr(data-count);
-    font-size:30%;
-    padding:.6em;
-    border-radius:50%;
-    line-height:.8em;
-    color: white;
-    background:coral;
-    text-align:center;
-    min-width: 1em;
-    font-weight:bold;
-  }
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand {
+  /*color: #d5d5d5 !important;*/
+  color: #f5f5f5;
+  font-size: 13px !important;
+  letter-spacing: 2px;        
+}
 
-  .margen_top_icono_carrito{
-    margin-top: -16px;
-  }
+/* On hover, the links will turn white */
+/* .navbar-nav li a:hover {
+  color: #fff !important;
+}
+ */
+/* The active link */
+.navbar-nav li.active a {
+   color: #fff !important; 
+   background-color:#c4c437 !important; 
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+  border-color: black;
+}
+
+/* Dropdown */
+.open .dropdown-toggle {
+  color: #fff ;
+  background-color: rgb(87, 135, 199) !important;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+  color: #000 !important;
+}
+
+/* On hover, the dropdown links will turn red*/
+.dropdown-menu li a:hover {
+  background-color:  rgb(138, 182, 238) !important;
+} 
+
+#opcion_carrito .fa-stack[data-count]:after{
+  position:absolute;
+  right:0%;
+  top:1%;
+  content: attr(data-count);
+  font-size:30%;
+  padding:.6em;
+  border-radius:50%;
+  line-height:.8em;
+  color: white;
+  background:coral;
+  text-align:center;
+  min-width: 1em;
+  font-weight:bold;
+}
+
+.margen_top_icono_carrito{
+  margin-top: -12px;
+}
